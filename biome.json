@@ -22,8 +22,12 @@
       "!**/.source"
     ]
   },
-  "extends": [
-    "ultracite/core",
-    "ultracite/next"
-  ]
+  "extends": ["ultracite/core", "ultracite/next"],
+  "linter": {
+    "rules": {
+      "style": {
+        "noExportedImports": "info"
+      }
+    }
+  }
 }

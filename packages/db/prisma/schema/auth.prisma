@@ -1,5 +1,5 @@
 model User {
-  id            String    @id @map("_id")
+  id            String      @id @map("_id")
   name          String
   email         String
   emailVerified Boolean
@@ -12,22 +12,24 @@ model User {
   updatedAt     DateTime
   sessions      Session[]
   accounts      Account[]
+  attempts      Attempt[]
+  userStats     UserStats[]
 
   @@unique([email])
   @@map("user")
 }
 
 model Session {
-  id        String   @id @map("_id")
-  expiresAt DateTime
-  token     String
-  createdAt DateTime
-  updatedAt DateTime
-  ipAddress String?
-  userAgent String?
+  id             String   @id @map("_id")
+  expiresAt      DateTime
+  token          String
+  createdAt      DateTime
+  updatedAt      DateTime
+  ipAddress      String?
+  userAgent      String?
   impersonatedBy String?
-  userId    String
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([token])
   @@map("session")

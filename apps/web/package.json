@@ -25,7 +25,8 @@
     "@tanstack/react-query": "^5.85.5",
     "@prisma/client": "catalog:",
     "better-auth": "catalog:",
-    "@my-better-t-app/auth": "workspace:*"
+    "@my-better-t-app/auth": "workspace:*",
+    "@t3-oss/env-core": "catalog:"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.10",

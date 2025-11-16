@@ -26,7 +26,8 @@
     "@prisma/client": "catalog:",
     "better-auth": "catalog:",
     "@my-better-t-app/auth": "workspace:*",
-    "@t3-oss/env-core": "catalog:"
+    "@t3-oss/env-core": "catalog:",
+    "motion": "catalog:"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.10",
